@@ -1,11 +1,11 @@
 {
-	"name": "Communicator",
+	"name": "Conversations",
 	"icon": "fa fa-message",
 	"category": "social",
 	"platform": "all",
 	"access": "user",
 	"disabled": false,
-	"hidden": false,
+	"hidden": true,
 	"args": false,
 	"color": "blue"
 }

@@ -812,7 +812,6 @@ class DirectoryController extends Controller
 					}
 					if ($detail == 'place' && $item instanceof File) {
 						$item->append('exif');	
-						$item->append('geocoords');	
 					}
 				}
 			}

@@ -1,6 +1,6 @@
 {
 	"general": {
-		"default_topic": "What's New",
+		"default_topic": "Dreams",
 		"posts_per_page": 10,
 		"posts_direction": "top_down",
 		"default_privacy": "connections",
@@ -46,7 +46,7 @@
 	},
 	"language": {
 		"translation": false,
-		"language": "english"
+		"language": "English"
 	},
 	"storage": {
 		"copy_attachments": true,

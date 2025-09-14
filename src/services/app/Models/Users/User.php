@@ -44,7 +44,6 @@ use App\Models\Chats\Sharing\ChatInvitation;
 use App\Models\Chats\ChatMembership;
 use App\Models\Chats\ChatMessage;
 use App\Models\Chats\Chat;
-use App\Models\Places\CheckIn;
 use App\Notifications\Traits\Notifiable;
 use App\Utilities\Uuids\Guid;
 
@@ -131,7 +130,6 @@ class User extends TimeStamped
 		'username',
 		'email',
 		'gender',
-		'check_in',
 		'location',
 		'occupation',
 		'age',
@@ -227,15 +225,6 @@ class User extends TimeStamped
 	 */
 	public function getGenderAttribute(): ?string {
 		return $this->getGender();
-	}
-
-	/**
-	 * Get this user's check-in attribute.
-	 *
-	 * @return App\Models\Places\CheckIn
-	 */
-	public function getCheckInAttribute() {
-		return $this->getCheckIn();
 	}
 
 	/**
@@ -667,18 +656,6 @@ class User extends TimeStamped
 	 */
 	public function getGender(): ?string {
 		return $this->profile? $this->profile->gender : null;
-	}
-
-	/**
-	 * Get this users's check-in.
-	 *
-	 * @return object
-	 */
-	public function getCheckIn() {
-		return CheckIn::where('user_id', '=', $this->id)
-			->whereNull('checked_out_at')
-			->orderBy('created_at', 'DESC')
-			->first();
 	}
 
 	/**

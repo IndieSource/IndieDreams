@@ -76,23 +76,23 @@
 				},
 				"Audio": {
 					"icon": "fa fa-volume-up",
-					"directory": "Audio/"
+					"directory": null
 				},
 				"Music": {
 					"icon": "fa fa-music",
-					"directory": "Music/"
+					"directory": null
 				},
 				"Pictures": {
 					"icon": "fa fa-image",
-					"directory": "Pictures/"
+					"directory": null
 				},
 				"Videos": {
 					"icon": "fa fa-video",
-					"directory": "Videos/"
+					"directory": null
 				},
 				"Maps": {
 					"icon": "fa fa-map",
-					"directory": "Maps/"
+					"directory": null
 				}
 			},
 			"uploads": true,
@@ -232,14 +232,15 @@
 		"preferences": {
 			"desktop_apps": {
 				"phone": [
-					"app_launcher"
+					"image_generator"
 				],
 				"tablet": [
-					"app_launcher"
+					"image_generator",
+					"topic_viewer"
 				],
 				"desktop": [
-					"file_browser",
-					"communicator"
+					"image_generator",
+					"topic_viewer"
 				]
 			},
 			"admin_apps": {
@@ -17489,13 +17490,13 @@
 					"icon": "jpg.svg",
 					"font": "fa fa-file-image",
 					"color": "#14a045",
-					"app": "image_viewer"
+					"app": "image_generator"
 				},
 				"jpeg": {
 					"icon": "jpeg.svg",
 					"font": "fa fa-file-image",
 					"color": "#14a045",
-					"app": "image_viewer"
+					"app": "image_generator"
 				},
 				"jl": {
 					"icon": "jl.svg",
@@ -17669,7 +17670,7 @@
 					"icon": "png.svg",
 					"font": "fa fa-file-image",
 					"color": "#359c8a",
-					"app": "image_viewer"
+					"app": "image_generator"
 				},
 				"ppt": {
 					"icon": "ppt.svg",
@@ -18052,13 +18053,6 @@
 						"news-full.svg"
 					]
 				},
-				"Aerial": {
-					"font": "fa fa-helicopter",
-					"icon": [
-						"aerial-empty.svg",
-						"aerial-full.svg"
-					]
-				},
 				"Albums": {
 					"font": "fa fa-record-vinyl",
 					"icon": [
@@ -18092,20 +18086,6 @@
 					"icon": [
 						"archives-empty.svg",
 						"archives-full.svg"
-					]
-				},
-				"Astro": {
-					"font": "fa fa-moon",
-					"icon": [
-						"astro-empty.svg",
-						"astro-full.svg"
-					]
-				},
-				"Astronomy": {
-					"font": "fa fa-moon",
-					"icon": [
-						"astro-empty.svg",
-						"astro-full.svg"
 					]
 				},
 				"Audio": {
@@ -18220,13 +18200,6 @@
 						"facebook-full.svg"
 					]
 				},
-				"Fashion": {
-					"font": "fa fa-person-dress",
-					"icon": [
-						"fashion-empty.svg",
-						"fashion-full.svg"
-					]
-				},
 				"Favorites": {
 					"font": "fa fa-star",
 					"icon": [
@@ -18234,15 +18207,8 @@
 						"favorites-full.svg"
 					]
 				},
-				"Flowers": {
-					"font": "fa fa-gear",
-					"icon": [
-						"flowers-empty.svg",
-						"flowers-full.svg"
-					]
-				},
 				"Fonts": {
-					"font": "fa fa-font",
+					"font": "fa-font",
 					"icon": [
 						"fonts-empty.svg",
 						"fonts-full.svg"
@@ -18339,13 +18305,6 @@
 						"scripts-full.svg"
 					]
 				},
-				"Landscapes": {
-					"font": "fa fa-image",
-					"icon": [
-						"images-empty.svg",
-						"images-full.svg"
-					]
-				},
 				"Library": {
 					"font": "fa fa-book",
 					"icon": [
@@ -18360,25 +18319,11 @@
 						"apple-full.svg"
 					]
 				},
-				"Macro": {
-					"font": "fa fa-microscope",
-					"icon": [
-						"macro-empty.svg",
-						"macro-full.svg"
-					]
-				},
 				"Maps": {
 					"font": "fa fa-map",
 					"icon": [
 						"maps-empty.svg",
 						"maps-full.svg"
-					]
-				},
-				"Messages": {
-					"font": "fa fa-comment",
-					"icon": [
-						"messages-empty.svg",
-						"messages-full.svg"
 					]
 				},
 				"Microsoft": {
@@ -18409,20 +18354,6 @@
 						"music-full.svg"
 					]
 				},
-				"Nature": {
-					"font": "fa fa-tree",
-					"icon": [
-						"trees-empty.svg",
-						"trees-full.svg"
-					]
-				},
-				"News": {
-					"font": "fa fa-newspaper",
-					"icon": [
-						"news-empty.svg",
-						"news-full.svg"
-					]
-				},
 				"Notes": {
 					"font": "fa fa-sticky-note",
 					"icon": [
@@ -18442,13 +18373,6 @@
 					"icon": [
 						"people-empty.svg",
 						"people-full.svg"
-					]
-				},
-				"Pets": {
-					"font": "fa fa-dog",
-					"icon": [
-						"pets-empty.svg",
-						"pets-full.svg"
 					]
 				},
 				"Photos": {
@@ -18477,13 +18401,6 @@
 					"icon": [
 						"podcasts-empty.svg",
 						"podcasts-full.svg"
-					]
-				},
-				"Portraits": {
-					"font": "fa fa-user",
-					"icon": [
-						"portraits-empty.svg",
-						"portraits-full.svg"
 					]
 				},
 				"Posts": {
@@ -18598,25 +18515,11 @@
 						"soundtracks-full.svg"
 					]
 				},
-				"Sports": {
-					"font": "fa fa-football",
-					"icon": [
-						"football-empty.svg",
-						"football-full.svg"
-					]
-				},
 				"Spreadsheets": {
 					"font": "fa fa-calculator",
 					"icon": [
 						"calculations-empty.svg",
 						"calculations-full.svg"
-					]
-				},
-				"Travel": {
-					"font": "fa fa-suitcase",
-					"icon": [
-						"suitcase-empty.svg",
-						"suitcase-full.svg"
 					]
 				},
 				"Styles": {
@@ -18679,7 +18582,10 @@
 					]
 				},
 				"Uploads": {
-					"font": "fa fa-upload",
+					"font": [
+						"fa fa-upload",
+						"fa fa-upload"
+					],
 					"icon": [
 						"uploads-empty.svg",
 						"uploads-full.svg"
@@ -18718,13 +18624,6 @@
 					"icon": [
 						"websites-empty.svg",
 						"websites-full.svg"
-					]
-				},
-				"Wildlife": {
-					"font": "fa fa-horse",
-					"icon": [
-						"deer-empty.svg",
-						"deer-full.svg"
 					]
 				},
 				"Windows": {
@@ -18922,6 +18821,12 @@
 			"font-weight": "normal",
 			"url": null
 		},
+		"Impact": {
+			"font-family": "Impact, sans-serif",
+			"font-size": 14,
+			"font-weight": "normal",
+			"url": null
+		},
 		"Inter": {
 			"font-family": "Inter, sans-serif",
 			"font-size": 14,
@@ -19058,8 +18963,9 @@
 	"help": {
 		"name": "User Guide & Reference",
 		"logo": {
-			"src": "images/logos/logo.png",
-			"background": "var(--primary-color)"
+			"src": "images/logos/cloud-icon.svg",
+			"background": "var(--primary-color)",
+			"transform": "scale(1.25)"
 		},
 		"version": "2.0",
 		"items": {
@@ -19609,14 +19515,15 @@
 	"sounds": {
 		"aww": "sounds/aww.mp3",
 		"boing": "sounds/boing.mp3",
-		"bosuns-whistle": "sounds/bosuns-whistle.mp3",
+		"bosuns whistle": "sounds/bosuns-whistle.mp3",
 		"bullet": "sounds/bullet.mp3",
 		"chimes": "sounds/chimes.wav",
+		"chimes up": "sounds/chimes-up.mp3",
 		"chirp": "sounds/chirp.mp3",
 		"click": "sounds/click.mp3",
 		"cluck": "sounds/cluck.mp3",
-		"double-click": "sounds/double-click.mp3",
-		"double-pop": "sounds/double-pop.wav",
+		"double click": "sounds/double-click.mp3",
+		"double pop": "sounds/double-pop.wav",
 		"droplet": "sounds/droplet.mp3",
 		"kiss": "sounds/kiss.mp3",
 		"little dog": "sounds/little-dog.mp3",
@@ -19716,21 +19623,21 @@
 		"icon": "fa fa-hand-paper",
 		"title": "Welcome!",
 		"greeting": "Welcome to <%= application.name %>!",
-		"message": "We hope that you enjoy using <%= application.name %> to store, manage, and share your data. ",
+		"message": "We hope that you enjoy using <%= application.name %> to generate, manage, and share your dreams. To get started, just click the Generate button on the top toolbar.  For more information, you might want to review the <a href=\"#tutorial\">tutorial</a>.",
 		"delay": 3000,
 		"options": {
 			"view_video": {
 				"message": "See a video tour of the features and benefits.",
 				"icon": "fa fa-video",
 				"label": "View Video",
-				"path": "/Shared/Documents/Videos/Introduction.mp4",
+				"path": "/Shared/Documents/Videos/Tribbler Introduction.mp4",
 				"enabled": false
 			},
 			"view_slide_show": {
 				"message": "See a slide show tour of the features and benefits.",
 				"icon": "fa fa-desktop",
 				"label": "View Slide Show",
-				"path": "/Shared/Documents/Presentations/Introduction/",
+				"path": "/Shared/Documents/Presentations/Tribbler Presentation/",
 				"enabled": false
 			},
 			"set_theme": {
@@ -19740,7 +19647,7 @@
 				"enabled": false
 			},
 			"edit_profile": {
-				"message": "Edit your personal profile info for others to see.",
+				"message": "Edit your personal profile for others to see.",
 				"icon": "fa fa-user-circle",
 				"label": "Edit Profile",
 				"enabled": false

@@ -1,9 +1,8 @@
 {
 	"name": "Profile",
 	"icon": "fa fa-user-circle",
-	"category": "social",
 	"platform": "mobile",
-	"access": "user",
+	"category": "social",
 	"disabled": false,
 	"hidden": false,
 	"args": false,

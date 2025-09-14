@@ -18,8 +18,8 @@
 
 # define directories
 #
-src=../../sharedigm
-dest=../../sharedigm-built
+src=../../indiedreams
+dest=../../indiedreams-built
 
 #
 # functions

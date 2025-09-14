@@ -55,14 +55,12 @@
 	},
 	"audio_player": {
 		"general": {
+			"detail_kind": "artist",
 			"volume": 5,
 			"looping": {
 				"track": false,
 				"album": false
 			},
-			"detail_kind": "artist",
-			"sort_kind": "track_number",
-			"sort_order": "increasing",
 			"toolbars": {
 				"play": true,
 				"volume": true,
@@ -317,7 +315,7 @@
 	},
 	"communicator": {
 		"general": {
-			"default_topic": "What's New",
+			"default_topic": "Dreams",
 			"posts_per_page": 10,
 			"posts_direction": "top_down",
 			"messages_per_page": 50,
@@ -367,7 +365,7 @@
 		},
 		"language": {
 			"translation": false,
-			"language": "english"
+			"language": "English"
 		},
 		"storage": {
 			"copy_attachments": true,
@@ -488,9 +486,9 @@
 	"file_browser": {
 		"general": {
 			"view_kind": {
-				"phone": "cards",
-				"tablet": "cards",
-				"desktop": "icons"
+				"phone": "tiles",
+				"tablet": "tiles",
+				"desktop": "tiles"
 			},
 			"tile_size": "medium",
 			"detail_kind": {
@@ -554,7 +552,7 @@
 				"hidden_files": false,
 				"file_extensions": false,
 				"thumbnails": true,
-				"image_names": true
+				"image_names": false
 			},
 			"clipboard_confirm": "replace"
 		},
@@ -604,6 +602,73 @@
 				"maximized": true,
 				"full_screen": false
 			}
+		}
+	},
+	"image_generator": {
+		"general": {
+			"background_color": null,
+			"toolbars": {
+				"mouse_mode": true,
+				"zoom_mode": true,
+				"zoom": false,
+				"rotate": false,
+				"generate": true,
+				"image": true
+			},
+			"show_prompt": true,
+			"home_directory": null
+		},
+		"display": {
+			"panes": {
+				"sidebar": true,
+				"info_bar": false
+			},
+			"sidebar_size": {
+				"phone": 0,
+				"tablet": 30,
+				"desktop": 30
+			},
+			"sidebar_min_size": {
+				"phone": 0,
+				"tablet": 175,
+				"desktop": 175
+			},
+			"sidebar_panels": {
+				"favorites": true,
+				"images": true,
+				"parameters": true,
+				"files": true
+			},
+			"sidebar_view_kind": {
+				"phone": "tiles",
+				"tablet": "tiles",
+				"desktop": "tiles"
+			},
+			"sidebar_tile_size": {
+				"phone": "small",
+				"tablet": "medium",
+				"desktop": "large"
+			},
+			"info_bar_size": {
+				"phone": 50,
+				"tablet": 25,
+				"desktop": 25
+			}
+		},
+		"window": {
+			"window_size": "medium",
+			"window_state": {
+				"maximized": true,
+				"full_screen": false
+			}
+		},
+		"slide_show": {
+			"slide_duration": 5,
+			"slide_looping": true
+		},
+		"effects": {
+			"zoom_duration": 100,
+			"rotate_duration": 500
 		}
 	},
 	"image_viewer": {
@@ -786,12 +851,12 @@
 			"zoom_to_duration": 5
 		},
 		"storage": {
-			"home_directory": "Maps/",
-			"photos_directory": "Pictures/",
-			"videos_directory": "Videos/",
-			"uploads_directory": "Uploads/",
-			"dropbox_directory": "Pictures/Dropbox/",
-			"google_directory": "Pictures/Google/"
+			"home_directory": null,
+			"photos_directory": null,
+			"videos_directory": null,
+			"uploads_directory": null,
+			"dropbox_directory": null,
+			"google_directory": null
 		}
 	},
 	"notification_center": {
@@ -1296,6 +1361,44 @@
 			}
 		}
 	},
+	"token_manager": {
+		"general": {
+			"toolbars": {
+				"nav": true,
+				"page": true
+			}
+		},
+		"display": {
+			"panes": {
+				"sidebar": true
+			},
+			"sidebar_size": {
+				"phone": 0,
+				"tablet": 35,
+				"desktop": 35
+			},
+			"sidebar_min_size": {
+				"phone": 0,
+				"tablet": 175,
+				"desktop": 175
+			},
+			"sidebar_panels": {
+				"tokens": true
+			},
+			"sidebar_view_kind": {
+				"phone": "lists",
+				"tablet": "lists",
+				"desktop": "lists"
+			}
+		},
+		"window": {
+			"window_size": "medium",
+			"window_state": {
+				"maximized": false,
+				"full_screen": false
+			}
+		}
+	},
 	"topic_browser": {
 		"general": {
 			"view_kind": {
@@ -1340,7 +1443,7 @@
 	},
 	"topic_viewer": {
 		"general": {
-			"default_topic": "What's New",
+			"default_topic": "Dreams",
 			"posts_per_page": 10,
 			"posts_direction": "top_down",
 			"default_privacy": "connections",
@@ -1386,7 +1489,7 @@
 		},
 		"language": {
 			"translation": false,
-			"language": "english"
+			"language": "English"
 		},
 		"storage": {
 			"copy_attachments": true,
@@ -1466,9 +1569,7 @@
 				"desktop": 175
 			},
 			"sidebar_panels": {
-				"favorites": true,
-				"videos": true,
-				"files": false
+				"videos": true
 			},
 			"sidebar_view_kind": {
 				"phone": "tiles",

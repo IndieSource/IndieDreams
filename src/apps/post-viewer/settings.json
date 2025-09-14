@@ -1,10 +1,9 @@
 {
-	"name": "Comments",
+	"name": "Posts",
 	"icon": "fa fa-newspaper",
-	"category": "social",
 	"platform": "all",
-	"access": "user",
-	"disabled": false,
+	"category": "social",
+	"disabled": true,
 	"hidden": true,
 	"args": false,
 	"color": "blue"

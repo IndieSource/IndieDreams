@@ -1,9 +1,15 @@
 <div class="primary colored section">
 	<div class="row">
 		<div class="col-sm-6">
-			<h1><img class="icon" src="images/logos/logo.svg" />Sharing Made Simple</h1>
-			<p><%= application.name %> is a <a href="#features/self-hostable">self-hostable</a> cloud based operating system that brings together file management, file sharing, and collaboration / social networking all in one easy to use platform. </p>
-			<p>Sharedigm can help you to share your digital life.</p>
+			<h1><img class="icon" src="images/logos/cloud-icon.svg" />What is <%= application.name %>?</h1>
+
+			<div class="well">
+				<b>indie</b> (adjective): A shortened term for independent, referring to a product, company, or artist not backed by a major, mainstream corporation. 
+			</div>
+
+			<p>Explore your dreams using AI image generation technology. Using simple text prompts, you can visualize virtually anything that you can think of. Best of all, you can run it on your own server. </p>
+
+			<p>Declare your independence today!</p>
 		</div>
 		<div class="col-sm-6">
 			<div class="figure">
@@ -11,8 +17,33 @@
 				<div class="caption">Desktop</div>
 			</div>
 			<div class="figure" style="margin-right:-100px; margin-top:-250px">
-				<a href="images/info/mobile/iphone.png" target="_blank" class="lightbox" title="Mobile>"><img src="images/info/mobile/iphone.png" /></a>
+				<a href="images/info/mobile/iphone.png" target="_blank" class="lightbox" title="Mobile"><img src="images/info/mobile/iphone.png" /></a>
 				<div class="caption">Mobile</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="section">
+	<div class="row">
+		<div class="col-sm-6">
+			<h2><i class="fa fa-circle-check"></i><%= application.name %> Advantages</h2>
+			<ul>
+				<li>Self-hostable (on-prem or in the cloud)</li>
+				<li>Free</li>
+				<li>Easy to use and install</li>
+				<li>Platform independent</li>
+				<li>Open Source</li>
+				<li>Secure</li>
+				<li>Private</li>
+			</ul>
+		</div>
+		<div class="col-sm-6">
+			<div class="figure">
+				<a class="attention" href="http://rebelcloud.org">
+					<img src="images/logos/indie-icon.svg" />
+				</a>
+				<div class="caption">Are You An Indie?</div>
 			</div>
 		</div>
 	</div>
@@ -27,23 +58,9 @@
 		<div class="col-sm-6">
 			<div class="figure">
 				<a href="#downloads">
-					<img style="width:150px" src="images/welcome/free-icon.svg" />
+					<img src="images/welcome/free-icon.svg" />
 				</a>
 			</div>
-		</div>
-	</div>
-</div>
-
-<div class="section">
-	<div class="row">
-		<div class="col-sm-6">
-			<h2><i class="fa fa-smile"></i>It's Easy to Use</h2>
-			<p>The easy to use and familiar user interface blends the power of the cloud with the best aspects of the user interfaces that you already know and love. </p>
-		</div>
-		<div class="col-sm-6">
-			<div class="figure">
-				<img src="images/welcome/smile.svg" />
-			</div>	
 		</div>
 	</div>
 </div>
@@ -57,8 +74,11 @@
 		<div class="col-sm-6">
 			<div class="figure">
 				<a href="#downloads">
-					<img height="175px" src="images/welcome/rocket-icon.svg" />
+					<img src="images/logos/indierocket-icon.svg" />
 				</a>
+				<div class="caption">
+					Launch Me!
+				</div>
 			</div>
 		</div>
 	</div>
@@ -67,13 +87,8 @@
 <div class="section">
 	<div class="row">
 		<div class="col-sm-6">
-			<h2><i class="fa fa-pencil-alt"></i>It's Quick To Sign Up</h2>
-			<% let identityProviders = application.session.has('config')? application.session.get('config').identity_providers : undefined; %>
-			<% if (identityProviders && identityProviders.length > 0) { %>
-			<p>Signing up is quick and easy.  There's a simple registration form or if you're already signed in to an identity provider (<%= identityProviders.join(', ') %>), just hit the "Sign Up With" button and you can get started in seconds! </p>
-			<% } else { %>
-			<p>Signing up is quick and easy.  Fill out a simple registration to get started in seconds! </p>
-			<% } %>
+			<h2><i class="fa fa-sign-in-alt"></i>It's Easy to Try</h2>
+			<p>Before installing <%= application.name %> on your own server, you can try it out right here.  Just hit the "Sign Up" button to create an account and give the platform a try.</p>
 		</div>
 		<div class="col-sm-6">
 			<div class="well">
@@ -92,11 +107,113 @@
 <div class="section">
 	<div class="row">
 		<div class="col-sm-6">
-			<h2><i class="fa fa-mobile"></i>It's Accessible Anywhere</h2>
-			<p>Access your digital world from anywhere on <a href="#features/platform-independent">any internet connected device.</a> </p>
+			<h2><i class="fa fa-robot"></i>Choose From A Variety of AI Image Generators</h2>
+			<p><%= application.name %> allows you to access a variety of image generation engines. Currently supported image generators include: </p>
+			<ul>
+				<% if (application.session.has('config')) { %>
+				<% let image_generators = config.settings.defaults.image_generators; %>
+				<% if (image_generators) { %>
+				<% let names = application.session.get('config').image_generators; %>
+				<% if (names) { %>
+				<% for (let i = 0; i < names.length; i++) { %>
+				<% let name = names[i]; %>
+				<% let image_generator = config.settings.defaults.image_generators[name]; %>
+				<li><a href="<%= image_generator.url %>" target="_blank"><%= name %></a></li>
+				<% } %>
+				<% } %>
+				<% } %>
+				<% } %>
+			</ul>
+		</div>
+		<div class="col-sm-6 center aligned" style="display:flex">
+			<div class="logos" style="margin:auto">
+				<% if (application.session.has('config')) { %>
+				<% let image_generators = config.settings.defaults.image_generators; %>
+				<% if (image_generators) { %>
+				<% let names = application.session.get('config').image_generators; %>
+				<% if (names) { %>
+				<% for (let i = 0; i < names.length; i++) { %>
+				<% let name = names[i]; %>
+				<% let image_generator = image_generators[name]; %>
+				<a href="<%= image_generator.url %>" target="_blank"><img height="50px" style="margin:25px; max-width:200px" src="<%= image_generator.logo %>" /></a>
+				<% } %>
+				<% } %>
+				<% } %>
+				<% } %>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="section">
+	<div class="row">
+		<div class="col-sm-6">
+			<h2><i class="fa fa-image"></i>Generate Amazing Images</h2>
+			<p>Use <%= application.name %> to create amazing images. Simply by typing in a text prompt / description of what you'd like to see, you can explore a universe of possibilities. </p>
 		</div>
 		<div class="col-sm-6">
-			<a href="#features/platform-independent">
+			<div class="figure">
+				<a href="images/info/features/large/generation.png" target="_blank" class="lightbox" title="Generate Amazing Images"><img src="images/info/features/small/generation.png" /></a>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="section">
+	<div class="row">
+		<div class="col-sm-6">
+			<h2><i class="fa fa-gem"></i>Enhance Your Images</h2>
+			<p>Use <%= application.name %> to enhance your existing images. Take a generated image or a photograph and apply prompts and styles to transform it into something new. </p>
+		</div>
+		<div class="col-sm-6">
+			<div class="center aligned">
+				<a href="images/info/features/large/1698557519.png" target="_blank" class="lightbox" rel="enhancement"><img width="128" src="images/info/features/small/1698557519.png" /></a>
+
+				<a href="images/info/features/large/1699321241.png" target="_blank" class="lightbox" rel="enhancement"><img width="128" src="images/info/features/small/1699321241.png" /></a>
+
+				<a href="images/info/features/large/1699321348.png" target="_blank" class="lightbox" rel="enhancement"><img width="128" src="images/info/features/small/1699321348.png" /></a>
+
+				<a href="images/info/features/large/1699321590.png" target="_blank" class="lightbox" rel="enhancement"><img width="128" src="images/info/features/small/1699321590.png" /></a>
+
+				<a href="images/info/features/large/1699321823.png" target="_blank" class="lightbox" rel="enhancement"><img width="128" src="images/info/features/small/1699321823.png" /></a>
+
+				<a href="images/info/features/large/1699321991.png" target="_blank" class="lightbox" rel="enhancement"><img width="128" src="images/info/features/small/1699321991.png" /></a>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="section">
+	<div class="row">
+		<div class="col-sm-6">
+			<h2><i class="fa fa-share"></i>Share Your AI Images</h2>
+			<p><%= application.name %> includes a wide range of sharing mechanisms for sharing your AI generated dream images: Sharing methods include: </p>
+			<ul>
+				<li>Share by Discussion Topic</li>
+				<li>Share by Chat Message</li>
+				<li><a href="https://www.dreamachines.org/#links/7ac49ddb-8d9c-a1e1-2b9c-003bbbdfb9f2" target="_blank">Share by Link</a></li>
+				<li>Share by Email</li>
+			</ul>
+		</div>
+		<div class="col-sm-6">
+			<div class="figure">
+				<a href="images/welcome/topic-viewer.png" target="_blank" class="lightbox" title="Share by Discussion Topic"><img src="images/welcome/topic-viewer.png" /></a>
+				<div class="caption">Share by Discussion Topic</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="section">
+	<div class="row">
+		<div class="col-sm-6">
+			<a class="unstyled" href="#features/platform-independent">
+				<h2><i class="fa fa-mobile"></i>Dream Anywhere</h2>
+				<p>You never know when or where or inspiration may strike.  With <%= application.name %>, you can create dream images from anywhere on any internet connected device. </p>
+			</a>
+		</div>
+		<div class="col-sm-6">
+			<a class="unstyled" href="#features/platform-independent">
 				<div class="figure">
 					<a href="images/info/mobile/iphone.png" target="_blank" class="lightbox" title="<%= application.name %> Mobile"><img src="images/info/mobile/iphone.png" /></a>
 					<div class="caption"><%= application.name %> Mobile</div>
@@ -106,39 +223,26 @@
 	</div>
 </div>
 
+<% let identityProviders = application.session.has('config')? application.session.get('config').identity_providers : undefined; %>
 <div class="section">
 	<div class="row">
 		<div class="col-sm-6">
-			<h2><i class="fa fa-rocket"></i>Apps</h2>
-			<p><%= application.name %> has a collection of <a href="#apps">apps</a> for viewing, managing and sharing your data.</p>
+			<h2><i class="fa fa-pencil-alt"></i>It's Quick To Sign Up</h2>
+			<% if (identityProviders && identityProviders.length > 0) { %>
+			<p>Signing up is quick and easy.  There's a simple registration form or if you're already signed in to an identity provider (<%= identityProviders.join(', ') %>), just hit the "Sign Up With" button and you can get started in seconds! </p>
+			<% } else { %>
+			<p>Signing up is quick and easy.  Fill out a simple registration to get started in seconds! </p>
+			<% } %>
 		</div>
 		<div class="col-sm-6">
-			<div class="icons animated carousel">
-				<% let apps = application.getVisibleApps(); %>
-				<% for (let i = 0; i < apps.length; i++) { %>
-				<% let app = apps.at(i); %>
-
-				<% if (!app.get('disabled')) { %>
-				<div class="carousel-cell">
-					<div class="app-icons large icon-grid items">
-						<a href="#apps/<%= app.get('app') %>">
-						<div class="item" href="#apps/profile-browser" style="text-decoration:none">	
-							<div class="row">
-								<div class="icon colored <%= app.get('color') %>">
-									<img src="images/icons/apps/<%= app.get('image') || app.get('app') + '.svg' %>" />
-									<i class="<%= app.get('icon') %>"></i>
-								</div>
-							</div>
-							<div class="row">
-								<div class="name"><%= app.get('name') %></div>
-							</div>
-						</div>
-						</a>
-					</div>
+			<div class="well">
+				<br />
+				<div class="buttons">
+					<button class="sign-up btn btn-lg">
+						<i class="fa fa-pencil-alt"></i>Sign Up!
+					</button>
 				</div>
-				<% } %>
-
-				<% } %>
+				<br />
 			</div>
 		</div>
 	</div>
@@ -147,105 +251,14 @@
 <div class="section">
 	<div class="row">
 		<div class="col-sm-6">
-			<h2><i class="fa fa-tools"></i>It's Self-Hostable!</h2>
-			<p>Are you a DIY type person?  You can <a href="#features/self-hostable">run <%= application.name %> on your own server</a>! Join the host it yourself (HIY) movement to retake control over your data! </p>
+			<h2><i class="fa fa-tools"></i>Take Back Control</h2>
+			<p>You no longer need to give up control over your data just to get access to a technology platform. By running your own <%= application.name %>, you control the platform and your data. Join the <a href="#features/host-it-yourself">host it yourself (HIY)</a> movement and take back control over your (digital) life! </p>
 		</div>
 		<div class="col-sm-6">
 			<div class="figure">
 				<a href="#welcome/we-can-do-it">
 					<img class="vertical" src="images/welcome/we-can-do-it.jpg" />
 				</a>
-			</div>
-		</div>
-	</div>
-</div>
-
-<div class="section">
-	<div class="row">
-		<div class="col-sm-6">
-			<h2><i class="fa fa-heart"></i>You Might Also Like</h2>
-			<p>You might also like these other websites built upon the Sharedigm <a href="#platform">platform</a>. </p>
-		</div>
-		<div class="col-sm-6">
-			<div class="icons large icon-grid items">
-
-				<div class="item">	
-					<div class="row">
-						<a href="http://www.rocketkitty.org" target="_blank">
-							<div class="icon">
-								<img src="images/logos/rocketkitty.png" />
-							</div>
-						</a>
-					</div>
-					<div class="row">
-						<div class="name">RocketKitty</div>
-					</div>
-				</div>
-
-				<div class="item">	
-					<div class="row">
-						<a href="http://www.easybucket.org" target="_blank">
-							<div class="icon">
-								<img src="images/logos/easybucket.png" />
-							</div>
-						</a>
-					</div>
-					<div class="row">
-						<div class="name">EasyBucket</div>
-					</div>
-				</div>
-
-				<div class="item">	
-					<div class="row">
-						<a href="http://www.opticexplorer.com" target="_blank">
-							<div class="icon">
-								<img src="images/logos/opticexplorer.png" />
-							</div>
-						</a>
-					</div>
-					<div class="row">
-						<div class="name">OpticExplorer</div>
-					</div>
-				</div>
-
-				<div class="item">	
-					<div class="row">
-						<a href="http://www.dreamachines.ai" target="_blank">
-							<div class="icon">
-								<img src="images/logos/dreamachines.png" />
-							</div>
-						</a>
-					</div>
-					<div class="row">
-						<div class="name">Dreamachines</div>
-					</div>
-				</div>
-
-				<div class="item">
-					<div class="row">
-						<a href="http://cloudintosh.sharedigm.com" target="_blank">
-							<div class="icon">
-								<img src="images/logos/cloudintosh.png" />
-							</div>
-						</a>
-					</div>
-					<div class="row">
-						<div class="name">Cloudintosh</div>
-					</div>
-				</div>
-
-				<div class="item">	
-					<div class="row">
-						<a href="http://windows3000.sharedigm.com" target="_blank">
-							<div class="icon">
-								<img src="images/logos/windows3000.png" />
-							</div>
-						</a>
-					</div>
-					<div class="row">
-						<div class="name">Windows3000</div>
-					</div>
-				</div>
 			</div>
 		</div>
 	</div>

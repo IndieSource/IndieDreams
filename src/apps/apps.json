@@ -2,7 +2,7 @@
 	"account_manager": {
 		"name": "Accounts",
 		"icon": "fa fa-users",
-		"category": "configuration",
+		"category": "system",
 		"platform": "all",
 		"access": "admin",
 		"disabled": false,
@@ -28,7 +28,7 @@
 		"platform": "all",
 		"access": "user",
 		"disabled": false,
-		"hidden": false,
+		"hidden": true,
 		"args": false,
 		"color": "plum",
 		"favorites": {
@@ -43,9 +43,9 @@
 		"platform": "all",
 		"access": "all",
 		"disabled": false,
-		"hidden": false,
+		"hidden": true,
 		"args": false,
-		"color": "green"
+		"color": "lime"
 	},
 	"calendar": {
 		"name": "Calendar",
@@ -54,7 +54,7 @@
 		"platform": "all",
 		"access": "all",
 		"disabled": false,
-		"hidden": false,
+		"hidden": true,
 		"args": false,
 		"color": "cyan"
 	},
@@ -65,7 +65,7 @@
 		"platform": "all",
 		"access": "user",
 		"disabled": false,
-		"hidden": false,
+		"hidden": true,
 		"args": false,
 		"color": "blue"
 	},
@@ -76,7 +76,7 @@
 		"platform": "all",
 		"access": "user",
 		"disabled": false,
-		"hidden": false,
+		"hidden": true,
 		"args": false,
 		"color": "blue",
 		"new_chat_invitation_message": "Hi. Let's chat!",
@@ -87,7 +87,7 @@
 		"icon": "fa fa-clock",
 		"category": "utility",
 		"platform": "all",
-		"access": "all",
+		"access": "user",
 		"disabled": false,
 		"hidden": false,
 		"args": false,
@@ -100,21 +100,18 @@
 		"platform": "all",
 		"access": "user",
 		"disabled": false,
-		"hidden": false,
+		"hidden": true,
 		"args": true,
-		"color": "teal",
-		"favorites": {
-			"#1": "Code/"
-		}
+		"color": "teal"
 	},
 	"communicator": {
-		"name": "Communicator",
+		"name": "Conversations",
 		"icon": "fa fa-message",
 		"category": "social",
 		"platform": "all",
 		"access": "user",
 		"disabled": false,
-		"hidden": false,
+		"hidden": true,
 		"args": false,
 		"color": "blue"
 	},
@@ -128,17 +125,16 @@
 		"hidden": false,
 		"args": false,
 		"color": "blue",
-		"group_icon_selector_path": "/Shared/Pictures",
-		"connection_message": "Hi there!"
+		"group_icon_selector_path": "/Shared/Pictures"
 	},
 	"contact_editor": {
 		"name": "Contacts",
 		"icon": "fa fa-address-book",
-		"category": "productivity",
+		"category": "utility",
 		"platform": "all",
 		"access": "user",
 		"disabled": false,
-		"hidden": false,
+		"hidden": true,
 		"args": false,
 		"color": "raspberry"
 	},
@@ -164,13 +160,7 @@
 		"args": false,
 		"color": "cyan",
 		"favorites": {
-			"#1": "~/",
-			"#2": "Documents/",
-			"#3": "Pictures/",
-			"#4": "Profile/",
-			"#5": "Music/",
-			"#6": "Videos/",
-			"#7": "Trash/"
+			"#1": "~/"
 		},
 		"shared_directory": "/Shared",
 		"max_thumbnail_file_size": 100000000,
@@ -180,13 +170,24 @@
 	"help_viewer": {
 		"name": "Help",
 		"icon": "fa fa-question-circle",
-		"category": "system",
+		"category": "utility",
 		"platform": "all",
 		"access": "all",
 		"disabled": false,
 		"hidden": false,
 		"args": true,
 		"color": "red"
+	},
+	"image_generator": {
+		"name": "Dreams",
+		"icon": "fa fa-moon",
+		"category": "multimedia",
+		"platform": "all",
+		"access": "user",
+		"disabled": false,
+		"hidden": false,
+		"args": true,
+		"color": "violet"
 	},
 	"image_viewer": {
 		"name": "Images",
@@ -195,12 +196,9 @@
 		"platform": "all",
 		"access": "user",
 		"disabled": false,
-		"hidden": false,
+		"hidden": true,
 		"args": true,
-		"color": "gold",
-		"favorites": {
-			"#1": "Pictures/"
-		}
+		"color": "gold"
 	},
 	"mail_reader": {
 		"name": "Mail",
@@ -220,7 +218,7 @@
 		"platform": "all",
 		"access": "user",
 		"disabled": false,
-		"hidden": false,
+		"hidden": true,
 		"args": false,
 		"color": "green",
 		"markers": {
@@ -271,21 +269,20 @@
 	"pdf_viewer": {
 		"name": "PDF",
 		"icon": "fa fa-file-pdf",
-		"category": "productivity",
+		"category": "multimedia",
 		"platform": "all",
 		"access": "user",
 		"disabled": false,
-		"hidden": false,
+		"hidden": true,
 		"args": true,
 		"color": "white"
 	},
 	"post_viewer": {
-		"name": "Comments",
+		"name": "Posts",
 		"icon": "fa fa-newspaper",
-		"category": "social",
 		"platform": "all",
-		"access": "user",
-		"disabled": false,
+		"category": "social",
+		"disabled": true,
 		"hidden": true,
 		"args": false,
 		"color": "blue"
@@ -293,11 +290,10 @@
 	"profile_browser": {
 		"name": "People",
 		"icon": "fa fa-users",
+		"platform": "all",
 		"category": "social",
-		"platform": "mobile",
-		"access": "all",
 		"disabled": false,
-		"hidden": false,
+		"hidden": true,
 		"args": true,
 		"color": "blue",
 		"invitation_message": "I'd like to invite you to use this platform, which I use to store, manage, and share my data!"
@@ -305,9 +301,8 @@
 	"profile_viewer": {
 		"name": "Profile",
 		"icon": "fa fa-user-circle",
-		"category": "social",
 		"platform": "mobile",
-		"access": "user",
+		"category": "social",
 		"disabled": false,
 		"hidden": false,
 		"args": false,
@@ -328,12 +323,12 @@
 	},
 	"project_viewer": {
 		"name": "Tasks",
-		"icon": "fa fa-list",
+		"icon": "fa fa-check",
 		"category": "productivity",
 		"platform": "all",
 		"access": "user",
 		"disabled": false,
-		"hidden": false,
+		"hidden": true,
 		"args": false,
 		"color": "green",
 		"defaults": {
@@ -353,7 +348,7 @@
 		"platform": "all",
 		"access": "all",
 		"disabled": false,
-		"hidden": false,
+		"hidden": true,
 		"args": false,
 		"color": "cyan",
 		"placeholder": "Search for terms or text.",
@@ -394,7 +389,7 @@
 		"platform": "admiin",
 		"access": "all",
 		"disabled": false,
-		"hidden": false,
+		"hidden": true,
 		"args": false,
 		"color": "green"
 	},
@@ -405,7 +400,7 @@
 		"platform": "all",
 		"access": "user",
 		"disabled": false,
-		"hidden": false,
+		"hidden": true,
 		"args": true,
 		"color": "teal"
 	},
@@ -416,7 +411,7 @@
 		"platform": "all",
 		"access": "user",
 		"disabled": false,
-		"hidden": false,
+		"hidden": true,
 		"args": false,
 		"color": "grey",
 		"colors": [
@@ -443,7 +438,7 @@
 		"platform": "mobile",
 		"access": "user",
 		"disabled": false,
-		"hidden": false,
+		"hidden": true,
 		"args": false,
 		"color": "grey",
 		"themes": [
@@ -472,6 +467,19 @@
 		"args": false,
 		"color": "cyan"
 	},
+	"token_manager": {
+		"name": "Tokens",
+		"icon": "fa fa-coins",
+		"category": "system",
+		"platform": "all",
+		"access": "user",
+		"disabled": false,
+		"hidden": false,
+		"args": false,
+		"color": "grey",
+		"token_message": "If you run out of tokens, you may request additional tokens every 24 hours. ",
+		"api_key_message": "If you'd like more images than the free tokens allow, then you can supply your own API key and create as many images as you'd like. "
+	},
 	"topic_browser": {
 		"name": "Topics",
 		"icon": "fa fa-hashtag",
@@ -479,7 +487,7 @@
 		"platform": "all",
 		"access": "all",
 		"disabled": false,
-		"hidden": false,
+		"hidden": true,
 		"args": true,
 		"color": "blue"
 	},
@@ -495,7 +503,7 @@
 		"color": "blue",
 		"defaults": {
 			"topic": {
-				"name": "What's New",
+				"name": "Dreams",
 				"description": "This is the default topic.",
 				"required": true
 			}
@@ -510,7 +518,7 @@
 		"platform": "all",
 		"access": "user",
 		"disabled": false,
-		"hidden": false,
+		"hidden": true,
 		"args": true,
 		"color": "magenta"
 	},
@@ -521,7 +529,7 @@
 		"platform": "all",
 		"access": "user",
 		"disabled": false,
-		"hidden": false,
+		"hidden": true,
 		"args": true,
 		"color": "violet"
 	},

@@ -5,10 +5,7 @@
 	"platform": "all",
 	"access": "user",
 	"disabled": false,
-	"hidden": false,
+	"hidden": true,
 	"args": true,
-	"color": "gold",
-	"favorites": {
-		"#1": "Pictures/"
-	}
+	"color": "gold"
 }

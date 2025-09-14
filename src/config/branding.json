@@ -1,61 +1,65 @@
 {
-	"name": "Sharedigm",
-	"title": "Sharedigm",
+	"name": "IndieDreams",
+	"title": "IndieDreams",
 
 	"header": {
+		"background": "transparent",
 		"align": "center",
 
 		"brand": {
 			"logo": {
-				"src": "images/logos/logo.svg",
-				"border": "rounded"
+				"src": "images/logos/indiecloud-icon.svg",
+				"background": "var(--primary-color)",
+				"border": "rounded",
+				"padding": 2,
+				"width": 25,
+				"height": 25
 			},
 
 			"logotype": {
-				"font": "Syncopate",
+				"font": "Futura",
+				"font_weight": "bold",
 
 				"names": {
-					"Share": {
-						"color": ""
+					"indie": {
+						"first_letter": "150%",
+						"color": "var(--secondary-color)"
 					},
-					"digm": {
-						"color": "hsl(220, 100%, 66%)"
+					"Dreams": {
+						"first_letter": "150%",
+						"color": "var(--primary-color)"
 					}
 				}
 			}
 		},
 
 		"nav": {
-			"About": {
-				"icon": "fa fa-info-circle",
-				"href": "#about"
-			},
 			"Uses": {
 				"icon": "fa fa-user-circle",
 				"href": "#uses"
-			},
-			"Users": {
-				"icon": "fa fa-users",
-				"href": "#users",
-				"platform": "desktop-only"
 			},
 			"Features": {
 				"icon": "fa fa-lightbulb",
 				"href": "#features"
 			},
-			"Apps": {
-				"icon": "fa fa-rocket",
-				"href": "#apps"
-			},
-			"Platform": {
-				"icon": "fa fa-laptop",
-				"href": "#platform",
+			"Tutorial": {
+				"icon": "fa fa-chalkboard",
+				"href": "#tutorial",
 				"platform": "desktop-only"
 			},
-			"Benefits": {
-				"icon": "fa fa-gift",
-				"href": "#benefits",
+			"Tokens": {
+				"icon": "fa fa-coins",
+				"href": "#tokens",
 				"platform": "desktop-only"
+			},
+			"Installation": {
+				"icon": "fa fa-computer",
+				"href": "#installation",
+				"platform": "desktop-only"
+			},
+			"IndieCloud": {
+				"icon": "fa fa-cloud",
+				"href": "http://indiecloud.org"
 			}
 		},
 
@@ -77,15 +81,17 @@
 
 	"welcome": {
 		"template": "welcome.tpl",
-		"background": "linear-gradient(to bottom, hsl(220, 75%, 0%) 0%, hsla(220, 50%, 50%, 100%) 100%)",
+		"background_image": "images/backgrounds/background-repeat.jpg",
 
 		"masthead": {
-			"height": "100% - 70px"
+			"height": "100% - 70px",
+			"background": "linear-gradient(hsla(250, 25%, 33%, 0) 0%, hsla(250, 25%, 15%, 1.0) 100%)"
 		},
 
 		"carousel": {
 			"template": "welcome/carousel.tpl",
-			"color": "white"
+			"color": "white",
+			"background": "linear-gradient(hsla(250, 25%, 33%, 0) 0%, hsla(250, 25%, 15%, 1.0) 100%)"
 		},
 
 		"splash": {
@@ -94,42 +100,45 @@
 
 			"brand": {
 				"logo": {
-					"src": "images/logos/logo.svg",
-					"border": "rounded"
+					"src": "images/logos/cloud-icon.svg",
+					"border": "rounded",
+					"size": "large",
+					"filter": "drop-shadow(5px 5px 15px rgba(0, 0, 0, 0.25))"
 				},
 
 				"logotype": {
-					"font": "Syncopate",
+					"font": "Futura",
+					"font_weight": "bold",
+					"platform": "mobile",
 
 					"names": {
-						"Share": {
+						"indie": {
+							"first_letter": "150%",
 							"color": "white"
 						},
-						"digm": {
-							"color": "hsl(220, 100%, 66%)"
+						"Dreams": {
+							"first_letter": "150%",
+							"color": "var(--primary-color)"
 						}
 					}
 				}
 			},
 
 			"tagline": {
-				"text": "Sharing Made Simple",
-				"font": "Syncopate",
+				"text": "Your Dreams, Your Cloud",
+				"font": "Futura",
+				"font_size": "200%",
 				"font_weight": "bold",
+				"text_transform": "uppercase",
 				"color": "white",
-				"background": "hsl(220, 100%, 66%)",
+				"background_color": "var(--primary-color)",
 				"border": "rounded"
 			},
 
 			"description": {
-				"text": "Self-hostable cloud based <a href='#features/easy-to-use'>operating system</a>, <a href='#uses/file-sharing'>file sharing</a>, and <a href='#uses/social-networking'>social network</a>.",
+				"text": "Free, friendly, self-hostable cloud-based AI image generation and sharing.",
 				"color": "white"
 			}
-		},
-
-		"overlay2": {
-			"far_color": "hsl(220, 75%, 25%)",
-			"near_color": "hsla(220, 100%, 80%, 25%)"
 		},
 
 		"ribbons": [{
@@ -162,46 +171,59 @@
 			"corner": "bottom right",
 			"offset": -20,
 			"shadow": "none"
-		}]
+		}],
+
+		"message (disabled)": "message.tpl"
 	},
 
 	"page": {
-		"background": "",
+		"background": "null",
 		"theme": "",
-		"font": "",
+
+		"heading1": {
+			"font": "Futura"
+		},
+
+		"heading2": {
+			"font": "Futura"
+		},
+
+		"heading3": {
+			"font": "Futura"
+		},
 
 		"footer": {
-			"background": "#272740",
-			"color": null,
+			"color": "white",
+			"background2": "linear-gradient(to bottom, #131321 0%, var(--primary-color) 100%)",
+			"background": "url(images/backgrounds/background-repeat.jpg)",
+
+			"overlay": {
+				"background": "linear-gradient(hsla(250, 25%, 33%, 0) 0%, hsla(250, 25%, 15%, 1.0) 100%)"
+			},
 
 			"brand": {
 				"logo": {
-					"src": "images/logos/logo.svg",
-					"href": "#",
-					"border": "rounded"
+					"src": "images/logos/cloud-icon.svg",
+					"height": 150,
+					"border": "rounded",
+					"filter": "drop-shadow(5px 5px 10px rgba(0,0,0,0.2))"
 				},
 
 				"logotype": {
-					"font": "Syncopate",
+					"font": "Futura",
+					"font_weight": "bold",
 
 					"names": {
-						"Share": {
+						"indie": {
+							"first_letter": "150%",
 							"color": "white"
 						},
-						"digm": {
-							"color": "hsl(220, 100%, 66%)"
+						"Dreams": {
+							"first_letter": "150%",
+							"color": "var(--primary-color)"
 						}
 					}
 				}
-			},
-
-			"tagline": {
-				"text": "Sharing Made Simple",
-				"font": "Syncopate",
-				"font_weight": "bold",
-				"color": "white",
-				"background": "hsl(220, 100%, 66%)",
-				"border": "rounded"
 			},
 
 			"info": {
@@ -223,10 +245,6 @@
 						"Apps": {
 							"icon": "fa fa-rocket",
 							"href": "#apps"
-						},
-						"Platform": {
-							"icon": "fa fa-laptop",
-							"href": "#platform"
 						}
 					}
 				},
@@ -249,10 +267,6 @@
 						"Code of Conduct": {
 							"icon": "fa fa-file-alt",
 							"href": "#policies/code-of-conduct"
-						},
-						"All": {
-							"icon": "fa fa-file-alt",
-							"href": "#policies"
 						}
 					}
 				},
@@ -261,12 +275,20 @@
 					"icon": "fa fa-question-circle",
 					"links": {
 						"User Guide": {
-							"icon": "fa fa-book",
+							"icon": "fa fa-question-circle",
 							"href": "#help"
+						},
+						"Installation": {
+							"icon": "fa fa-computer",
+							"href": "#installation"
 						},
 						"Contact Us": {
 							"icon": "fa fa-envelope",
 							"href": "#contact"
+						},
+						"IndieCloud": {
+							"icon": "fa fa-cloud",
+							"href": "http://indiecloud.org"
 						}
 					}
 				}
@@ -275,13 +297,13 @@
 	},
 
 	"footer": {
-		"background": "hsl(220, 100%, 66%)",
-		"font": "",
+		"background": "var(--primary-color)",
 		"color": "white",
 		"copyright": {
 			"year": "2025",
-			"logo": "images/logos/logo.svg",
-			"entity": "Sharedigm"
+			"logo": "images/logos/indiecloud-icon.svg",
+			"url": "http://indiecloud.org",
+			"entity": "IndieCloud.org"
 		}
 	}
 }

@@ -10,7 +10,7 @@
 	"color": "blue",
 	"defaults": {
 		"topic": {
-			"name": "What's New",
+			"name": "Dreams",
 			"description": "This is the default topic.",
 			"required": true
 		}

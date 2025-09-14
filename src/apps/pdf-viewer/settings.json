@@ -1,11 +1,11 @@
 {
 	"name": "PDF",
 	"icon": "fa fa-file-pdf",
-	"category": "productivity",
+	"category": "multimedia",
 	"platform": "all",
 	"access": "user",
 	"disabled": false,
-	"hidden": false,
+	"hidden": true,
 	"args": true,
 	"color": "white"
 }

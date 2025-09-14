@@ -1,7 +1,7 @@
 {
 	"name": "Help",
 	"icon": "fa fa-question-circle",
-	"category": "system",
+	"category": "utility",
 	"platform": "all",
 	"access": "all",
 	"disabled": false,

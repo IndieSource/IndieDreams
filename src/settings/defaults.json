@@ -50,23 +50,23 @@
 			},
 			"Audio": {
 				"icon": "fa fa-volume-up",
-				"directory": "Audio/"
+				"directory": null
 			},
 			"Music": {
 				"icon": "fa fa-music",
-				"directory": "Music/"
+				"directory": null
 			},
 			"Pictures": {
 				"icon": "fa fa-image",
-				"directory": "Pictures/"
+				"directory": null
 			},
 			"Videos": {
 				"icon": "fa fa-video",
-				"directory": "Videos/"
+				"directory": null
 			},
 			"Maps": {
 				"icon": "fa fa-map",
-				"directory": "Maps/"
+				"directory": null
 			}
 		},
 		"uploads": true,

@@ -1,9 +1,9 @@
 {
 	"general": {
 		"view_kind": {
-			"phone": "cards",
-			"tablet": "cards",
-			"desktop": "icons"
+			"phone": "tiles",
+			"tablet": "tiles",
+			"desktop": "tiles"
 		},
 		"tile_size": "medium",
 		"detail_kind": {
@@ -67,7 +67,7 @@
 			"hidden_files": false,
 			"file_extensions": false,
 			"thumbnails": true,
-			"image_names": true
+			"image_names": false
 		},
 		"clipboard_confirm": "replace"
 	},

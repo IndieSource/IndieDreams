@@ -22454,7 +22454,7 @@ svg .selection {
     height: 150px;
   }
   .welcome.page .splash .logo.large img {
-    height: 200px;
+    height: 175px;
   }
 }
 @media (max-width: 992px) {
@@ -22465,7 +22465,7 @@ svg .selection {
     height: 125px;
   }
   .welcome.page .splash .logo.large img {
-    height: 175px;
+    height: 150px;
   }
 }
 @media (max-width: 768px) {
@@ -22476,18 +22476,18 @@ svg .selection {
     height: 100px;
   }
   .welcome.page .splash .logo.large img {
-    height: 150px;
+    height: 125px;
   }
 }
 @media (max-width: 480px) {
   .welcome.page .splash .logo.small img {
-    height: 75px;
+    height: 50px;
   }
   .welcome.page .splash .logo img, .welcome.page .splash .logo.medium img {
-    height: 100px;
+    height: 75px;
   }
   .welcome.page .splash .logo.large img {
-    height: 125px;
+    height: 100px;
   }
 }
 /******************************************************************************\
